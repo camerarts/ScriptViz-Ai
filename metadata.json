@@ -1,0 +1,5 @@
+{
+  "name": "ScriptViz AI",
+  "description": "A smart tool that transforms video scripts into dynamic data visualizations and structured storyboards using Gemini AI.",
+  "requestFramePermissions": []
+}
