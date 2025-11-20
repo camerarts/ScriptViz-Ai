@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Command, Download, ChevronRight } from 'lucide-react';
+import { Sparkles, Download, ChevronRight } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
