@@ -1,6 +1,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult, VisualType } from "../types";
 
+// Shim process for browser environment to satisfy TS and Runtime
+declare const process: {
+  env: {
+    API_KEY: string;
+  };
+};
+
 // Initialize Gemini Client
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
