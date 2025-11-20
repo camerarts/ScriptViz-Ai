@@ -161,7 +161,7 @@ export const ChartRenderer: React.FC<ChartRendererProps> = ({ type, data, visual
                 axisLine={false}
               />
               <Bar dataKey="value" radius={[8, 8, 0, 0]} filter="url(#shadow-3d)">
-                {chartData.map((entry, index) => (
+                {chartData.map((_entry, index) => (
                    <Cell key={`cell-${index}`} fill={`url(#3d-bar-${index % colors.length})`} />
                 ))}
                 <LabelList dataKey="value" content={renderCustomBarLabel} />
@@ -182,7 +182,7 @@ export const ChartRenderer: React.FC<ChartRendererProps> = ({ type, data, visual
                 dataKey="name" 
                 stroke="#475569" 
                 fontSize={14} 
-                fontWeight={700}
+                fontWeight={700} 
                 tickLine={false} 
                 axisLine={{ stroke: '#94a3b8', strokeWidth: 2 }}
                 dy={10} 
@@ -228,7 +228,7 @@ export const ChartRenderer: React.FC<ChartRendererProps> = ({ type, data, visual
                 cornerRadius={6}
                 filter="url(#shadow-3d)"
               >
-                {chartData.map((entry, index) => (
+                {chartData.map((_entry, index) => (
                   <Cell key={`cell-${index}`} fill={colors[index % colors.length]} stroke="rgba(255,255,255,0.2)" strokeWidth={2} />
                 ))}
                  <LabelList 
