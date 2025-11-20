@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { MessageSquareQuote, Download, Layers, Sparkles, FileDown, Loader2, RefreshCcw, MonitorPlay } from 'lucide-react';
+import { Layers, Sparkles, FileDown, Loader2, RefreshCcw, MonitorPlay } from 'lucide-react';
 import { AnalysisResult } from '../types';
 import { ChartRenderer } from './visuals/ChartRenderer';
 import html2canvas from 'html2canvas';
