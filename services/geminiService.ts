@@ -1,14 +1,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult, VisualType } from "../types";
 
-// Shim process for browser environment to satisfy TS and Runtime
-declare const process: {
-  env: {
-    API_KEY: string;
-  };
-};
+// Ensure process is defined for the specific property we need
+// @ts-ignore
+if (typeof process === 'undefined') {
+  // @ts-ignore
+  window.process = { env: { API_KEY: '' } };
+}
 
-// Initialize Gemini Client
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const analyzeScript = async (scriptText: string): Promise<AnalysisResult> => {
