@@ -1,12 +1,12 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult, VisualType } from "../types";
 
-// Ensure process is defined for the specific property we need
-// @ts-ignore
-if (typeof process === 'undefined') {
-  // @ts-ignore
-  window.process = { env: { API_KEY: '' } };
-}
+// Declare process locally to satisfy TypeScript without needing global Node types
+declare const process: {
+  env: {
+    API_KEY: string;
+  }
+};
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
